@@ -1,0 +1,35 @@
+﻿@{
+   // ViewBag.Title = "Scott's WebApp";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <!--This code block contains the code for the favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="~/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/img/favicon-16x16.png">
+    <link rel="manifest" href="~/img/site.webmanifest">
+    <link href="~/css/main.css" rel="stylesheet" /><!--This line references the css stylesheet-->
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <h1>@ViewBag.Title</h1>
+        <menu>
+            <p><a asp-controller="Home" asp-action="Index">Home</a>  |  <a asp-controller="Home" asp-action="GradeCalculator">Grade Calculator</a></p>
+        </menu>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>Stay tuned for more WebApps to come! If you would like Scott to build you a WebApp, you can call him at 801-616-1465</footer>
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/GradeCalculator.js"></script> <!--This line references the js file.-->
+</body>
+
+
+</html>
